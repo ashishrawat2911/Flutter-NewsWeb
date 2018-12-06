@@ -29,10 +29,10 @@ class _NewsListPageState extends State<NewsListPage> {
     String link;
     if (newsType == "top_news") {
       link =
-          "https://newsapi.org/v2/top-headlines?country=in&apiKey=ae6c3c0f9d8e485a98fd70edcff81134";
+          "https://newsapi.org/v2/top-headlines?country=in&apiKey=API_KEY";
     } else {
       link =
-          "https://newsapi.org/v2/top-headlines?country=in&category=$newsType&apiKey=ae6c3c0f9d8e485a98fd70edcff81134";
+          "https://newsapi.org/v2/top-headlines?country=in&category=$newsType&apiKey=API_KEY";
     }
     var res = await http
         .get(Uri.encodeFull(link), headers: {"Accept": "application/json"});
