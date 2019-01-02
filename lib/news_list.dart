@@ -56,27 +56,37 @@ class _NewsListPageState extends State<NewsListPage> {
           padding: const EdgeInsets.all(2.0),
           itemBuilder: (context, position) {
             return Card(
-              child: ListTile(
-                title: Text(
-                  '${article[position].title}',
-                  style: TextStyle(
-                      fontSize: 18.0,
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold),
-                ),
-                leading: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: SizedBox(
-                    child: article[position].urlToImage == null
-                        ? Image(
-                            image: AssetImage('images/no_image_available.png'),
-                          )
-                        : Image.network('${article[position].urlToImage}'),
-                    height: 100.0,
-                    width: 100.0,
+              child: Container(
+                height: 120.0,
+                width: 120.0,
+                child: Center(
+                  child: ListTile(
+                    subtitle: Padding(
+                      padding: const EdgeInsets.only(top: 5.0),
+                      child: Text(
+                        '${article[position].author}',
+                      ),
+                    ),
+                    title: Text(
+                      '${article[position].title}',
+                      style: TextStyle(
+                          fontSize: 14.0,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    leading: Container(
+                      height: 100.0,
+                      width: 100.0,
+                      child: article[position].urlToImage == null
+                          ? Image(
+                              image:
+                                  AssetImage('images/no_image_available.png'),
+                            )
+                          : Image.network('${article[position].urlToImage}'),
+                    ),
+                    onTap: () => _onTapItem(context, article[position]),
                   ),
                 ),
-                onTap: () => _onTapItem(context, article[position]),
               ),
             );
           }),

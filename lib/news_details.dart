@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_news_web/model/news.dart';
+import 'package:flutter_news_web/web_view.dart';
 
 class NewsDetails extends StatefulWidget {
   final Article article;
@@ -50,7 +51,11 @@ class _NewsDetailsState extends State<NewsDetails> {
                   "For more news",
                   style: TextStyle(color: Colors.white, fontSize: 18.0),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (BuildContext context) =>
+                         WebView(widget.article.url)));
+                },
               )
             ],
           ),

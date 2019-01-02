@@ -86,6 +86,13 @@
             </list>
           </value>
         </entry>
+        <entry key="flutter_webview_plugin">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/flutter_windows_v0.5.1-beta/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_webview_plugin-0.2.1+2/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="front_end">
           <value>
             <list>
@@ -386,6 +393,7 @@
       <root url="file://$USER_HOME$/AppData/Local/flutter_windows_v0.5.1-beta/flutter/.pub-cache/hosted/pub.dartlang.org/crypto-2.0.3/lib" />
       <root url="file://$USER_HOME$/AppData/Local/flutter_windows_v0.5.1-beta/flutter/.pub-cache/hosted/pub.dartlang.org/csslib-0.14.4/lib" />
       <root url="file://$USER_HOME$/AppData/Local/flutter_windows_v0.5.1-beta/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-0.1.2/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/flutter_windows_v0.5.1-beta/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_webview_plugin-0.2.1+2/lib" />
       <root url="file://$USER_HOME$/AppData/Local/flutter_windows_v0.5.1-beta/flutter/.pub-cache/hosted/pub.dartlang.org/front_end-0.1.0-alpha.12/lib" />
       <root url="file://$USER_HOME$/AppData/Local/flutter_windows_v0.5.1-beta/flutter/.pub-cache/hosted/pub.dartlang.org/glob-1.1.5/lib" />
       <root url="file://$USER_HOME$/AppData/Local/flutter_windows_v0.5.1-beta/flutter/.pub-cache/hosted/pub.dartlang.org/html-0.13.3/lib" />
