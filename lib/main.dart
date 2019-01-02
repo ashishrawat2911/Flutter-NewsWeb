@@ -53,9 +53,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     final title = 'News Web';
-    return MaterialApp(
-      title: title,
-      home: Scaffold(
+    return Scaffold(
         appBar: AppBar(
           title: Text(title),
         ),
@@ -95,7 +93,6 @@ class _HomePageState extends State<HomePage> {
             );
           }),
         ),
-      ),
     );
   }
 }
