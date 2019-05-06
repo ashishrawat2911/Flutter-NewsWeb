@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="Flutter Plugins" type="FlutterPluginsLibraryType">
     <CLASSES>
-      <root url="file://$USER_HOME$/AppData/Local/flutter_windows_v0.5.1-beta/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_webview_plugin-0.2.1+2" />
+      <root url="file://D:/sdk/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_webview_plugin-0.2.1+2" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

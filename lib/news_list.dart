@@ -17,15 +17,13 @@ class NewsListPage extends StatefulWidget {
 }
 
 class _NewsListPageState extends State<NewsListPage> {
-  List<Article> list;
-
   @override
   void initState() {
     super.initState();
-    this.getData(widget.newsType);
   }
 
   Future<List<Article>> getData(String newsType) async {
+    List<Article> list;
     String link;
     if (newsType == "top_news") {
       link =
@@ -36,15 +34,13 @@ class _NewsListPageState extends State<NewsListPage> {
     }
     var res = await http
         .get(Uri.encodeFull(link), headers: {"Accept": "application/json"});
-    print(res.body);
-    setState(() {
-      if (res.statusCode == 200) {
-        var data = json.decode(res.body);
-        var rest = data["articles"] as List;
-        print(rest);
-        list = rest.map<Article>((json) => Article.fromJson(json)).toList();
-      }
-    });
+    // print(res.body);
+    if (res.statusCode == 200) {
+      var data = json.decode(res.body);
+      var rest = data["articles"] as List;
+      print(rest);
+      list = rest.map<Article>((json) => Article.fromJson(json)).toList();
+    }
     print("List Size: ${list.length}");
     return list;
   }
@@ -105,9 +101,13 @@ class _NewsListPageState extends State<NewsListPage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: list != null
-          ? listViewWidget(list)
-          : Center(child: CircularProgressIndicator()),
+      body: FutureBuilder(
+          future: getData(widget.newsType),
+          builder: (context, snapshot) {
+            return snapshot.data != null
+                ? listViewWidget(snapshot.data)
+                : Center(child: CircularProgressIndicator());
+          }),
     );
   }
 }
