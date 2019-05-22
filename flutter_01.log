@@ -1,0 +1,87 @@
+Flutter crash report; please file at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter build apk
+
+## exception
+
+ProcessException: ProcessException: Process "E:\Android\FlutterProjects\Flutter-NewsWeb\android\gradlew.bat" exited abnormally:
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Could not determine java version from '12.0.1'.
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.
+
+* Get more help at https://help.gradle.org
+  Command: E:\Android\FlutterProjects\Flutter-NewsWeb\android\gradlew.bat -v
+
+```
+#0      runCheckedAsync (package:flutter_tools/src/base/process.dart:255:5)
+<asynchronous suspension>
+#1      _initializeGradle (package:flutter_tools/src/android/gradle.dart:225:9)
+<asynchronous suspension>
+#2      _ensureGradle (package:flutter_tools/src/android/gradle.dart:206:37)
+<asynchronous suspension>
+#3      buildGradleProject (package:flutter_tools/src/android/gradle.dart:336:31)
+<asynchronous suspension>
+#4      buildApk (package:flutter_tools/src/android/apk.dart:34:9)
+<asynchronous suspension>
+#5      BuildApkCommand.runCommand (package:flutter_tools/src/commands/build_apk.dart:51:11)
+<asynchronous suspension>
+#6      FlutterCommand.verifyThenRunCommand (package:flutter_tools/src/runner/flutter_command.dart:559:18)
+#7      _asyncThenWrapperHelper.<anonymous closure> (dart:async-patch/async_patch.dart:77:64)
+#8      _rootRunUnary (dart:async/zone.dart:1132:38)
+#9      _CustomZone.runUnary (dart:async/zone.dart:1029:19)
+#10     _FutureListener.handleValue (dart:async/future_impl.dart:126:18)
+#11     Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:639:45)
+#12     Future._propagateToListeners (dart:async/future_impl.dart:668:32)
+#13     Future._complete (dart:async/future_impl.dart:473:7)
+#14     _SyncCompleter.complete (dart:async/future_impl.dart:51:12)
+#15     _AsyncAwaitCompleter.complete.<anonymous closure> (dart:async-patch/async_patch.dart:33:20)
+#16     _rootRun (dart:async/zone.dart:1124:13)
+#17     _CustomZone.run (dart:async/zone.dart:1021:19)
+#18     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:947:23)
+#19     _microtaskLoop (dart:async/schedule_microtask.dart:41:21)
+#20     _startMicrotaskLoop (dart:async/schedule_microtask.dart:50:5)
+#21     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:115:13)
+#22     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:172:5)
+```
+
+## flutter doctor
+
+```
+[32m[✓][39m Flutter (Channel stable, v1.5.4-hotfix.2, on Microsoft Windows [Version 10.0.17134.765], locale en-IN)
+    [32m•[39m Flutter version 1.5.4-hotfix.2 at E:\flutter
+    [32m•[39m Framework revision 7a4c33425d (3 weeks ago), 2019-04-29 11:05:24 -0700
+    [32m•[39m Engine revision 52c7a1e849
+    [32m•[39m Dart version 2.3.0 (build 2.3.0-dev.0.5 a1668566e5)
+
+[33m[!][39m Android toolchain - develop for Android devices (Android SDK version 28.0.3)
+    [32m•[39m Android SDK at E:\Android\sdk
+    [32m•[39m Android NDK location not configured (optional; useful for native profiling support)
+    [32m•[39m Platform android-28, build-tools 28.0.3
+    [32m•[39m ANDROID_HOME = E:\Android\sdk
+    [32m•[39m Java binary at: C:\Program Files\Java\jdk-12.0.1\bin\java
+    [32m•[39m Java version Java(TM) SE Runtime Environment (build 12.0.1+12)
+    [31m✗[39m Android license status unknown.
+      Try re-installing or updating your Android SDK Manager.
+      See https://developer.android.com/studio/#downloads or visit https://flutter.dev/setup/#android-setup for detailed instructions.
+
+[33m[!][39m Android Studio (not installed)
+    [32m•[39m Android Studio not found; download from https://developer.android.com/studio/index.html
+      (or visit https://flutter.dev/setup/#android-setup for detailed instructions).
+
+[32m[✓][39m IntelliJ IDEA Community Edition (version 2019.1)
+    [32m•[39m IntelliJ at E:\IntelliJ IDEA Community Edition 2019.1.2
+    [32m•[39m Flutter plugin version 35.3.3
+    [32m•[39m Dart plugin version 191.7141.49
+
+[32m[✓][39m Connected device (1 available)
+    [32m•[39m Nokia 5 1 Plus • PDAID18082500568 • android-arm64 • Android 9 (API 28)
+
+[33m![39m Doctor found issues in 2 categories.
+```
