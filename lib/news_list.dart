@@ -74,11 +74,11 @@ class _NewsListPageState extends State<NewsListPage> {
                       height: 100.0,
                       width: 100.0,
                       child: article[position].urlToImage == null
-                          ? Image(
-                              image:
-                                  AssetImage('images/no_image_available.png'),
-                            )
-                          : Image.network('${article[position].urlToImage}'),
+                          ? Image.asset('images/no_image_available.png',height: 70,
+                            width: 70,),
+                            
+                          : Image.network('${article[position].urlToImage}',height: 70,
+                            width: 70,),
                     ),
                     onTap: () => _onTapItem(context, article[position]),
                   ),
