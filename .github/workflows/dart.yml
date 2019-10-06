@@ -12,6 +12,7 @@ jobs:
     - uses: subosito/flutter-action@v1
       with:
         flutter-version: '1.7.8+hotfix.4'
+    - run: chmod +x gradlew
     - run: flutter pub get
     - run: flutter build apk 
     - name: Create a Release APK
