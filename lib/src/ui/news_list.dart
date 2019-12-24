@@ -2,8 +2,8 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_news_web/model/news.dart';
-import 'package:flutter_news_web/news_details.dart';
+import 'package:flutter_news_web/src/ui/news_details.dart';
+import 'package:flutter_news_web/src/model/news_model.dart';
 import 'package:http/http.dart' as http;
 
 class NewsListPage extends StatefulWidget {
@@ -74,11 +74,16 @@ class _NewsListPageState extends State<NewsListPage> {
                       height: 100.0,
                       width: 100.0,
                       child: article[position].urlToImage == null
-                          ? Image.asset('images/no_image_available.png',height: 70,
-                            width: 70,),
-                            
-                          : Image.network('${article[position].urlToImage}',height: 70,
-                            width: 70,),
+                          ? Image.asset(
+                              'images/no_image_available.png',
+                              height: 70,
+                              width: 70,
+                            )
+                          : Image.network(
+                              '${article[position].urlToImage}',
+                              height: 70,
+                              width: 70,
+                            ),
                     ),
                     onTap: () => _onTapItem(context, article[position]),
                   ),
